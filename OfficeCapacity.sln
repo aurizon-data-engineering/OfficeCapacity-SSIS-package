@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "OfficeCapacity", "OfficeCapacity\OfficeCapacity.dtproj", "{D1ACD720-C763-4539-A373-D3FC17E453AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1ACD720-C763-4539-A373-D3FC17E453AD}.Development|Default.ActiveCfg = Development
+		{D1ACD720-C763-4539-A373-D3FC17E453AD}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3CAA376-0C0B-42E7-A79B-7E53FBC1BD7C}
+	EndGlobalSection
+EndGlobal
