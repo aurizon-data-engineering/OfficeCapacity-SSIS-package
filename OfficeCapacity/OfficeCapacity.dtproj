@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">PCL1R6YPN2</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJSz7vz/bIUGXF9a+IADR3AAAAAACAAAAAAADZgAAwAAAABAAAADU3lNC+/CgvMxVpUYSiKs2AAAAAASAAACgAAAAEAAAAMgsMrBo25p/5hfby/DTu2WIAAAALNv89enz3UIqnUIMB5LRKFOwdhOelQYj+D76PfVm9lnI0dqefUrVuw2rCXP2oWOr3hZu4imEWynb8AuYaX+Vq/kJ6INn51uz0tFapKN0irZwtk4SJ62dJPWvetiIISmZGZnLN3k1/iJWAd2HnVdjjmGeNSvk/XknDECU2k/+kPims9gDFOIe3hQAAACsmeV9rVSma2ymtdPwtExweUrXBA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJSz7vz/bIUGXF9a+IADR3AAAAAACAAAAAAADZgAAwAAAABAAAAAnwx6XBZFKmmvVQBzZuBqcAAAAAASAAACgAAAAEAAAAO7u0R76VQchB66FayjGOg+IAAAAYsR9234npcRteaS/vsPlxVI0Fi9qnoDbOR7rERw1+yVCPGu52O+RD18zub27lB3gi73g7g1eF0knQ43YzIC/T3L1ucyouO6Go93qNTrVykDrxX0FZd9cAXCar1uVJ6FGW/I6KNyETGdBDXWqEppRQ9vDa2PzPJv668iaHVY09+xhLFRwLgAkvxQAAAA8tdTtspH9wTCBDajiUlfA6AW6lg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">OfficeCapacityLoad</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">12</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">13</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{AA88D523-8322-44BE-8B32-2F737D833DF5}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{58AE3A00-BDE6-4254-814A-F052B5A47AE4}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -364,6 +364,30 @@
   <Configurations>
     <Configuration>
       <Name>Development</Name>
+      <Options>
+        <OutputPath>bin</OutputPath>
+        <ConnectionMappings />
+        <ConnectionProviderMappings />
+        <ConnectionSecurityMappings />
+        <DatabaseStorageLocations />
+        <TargetServerVersion>SQLServer2014</TargetServerVersion>
+        <AzureMode>false</AzureMode>
+        <LinkedAzureTenantId />
+        <LinkedAzureAccountId />
+        <LinkedAzureSSISIR />
+        <LinkedAzureStorage />
+        <RemoteExecutionFolder />
+        <ParameterConfigurationValues>
+          <ConfigurationSetting>
+            <Id>LastModifiedTime</Id>
+            <Name>LastModifiedTime</Name>
+            <Value xsi:type="xsd:dateTime">2020-11-25T03:39:31.3671242Z</Value>
+          </ConfigurationSetting>
+        </ParameterConfigurationValues>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>Production</Name>
       <Options>
         <OutputPath>bin</OutputPath>
         <ConnectionMappings />
