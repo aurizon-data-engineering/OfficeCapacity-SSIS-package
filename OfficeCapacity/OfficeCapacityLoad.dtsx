@@ -11,8 +11,8 @@
   DTS:LocaleID="3081"
   DTS:ObjectName="OfficeCapacityLoad"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{73CBB892-42D1-47F1-A3EF-AA101EE4FCD3}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{C869C4B2-DC62-42AD-9257-C66A499B9D07}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -41,7 +41,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Device Local Time"
-              DTS:DTSID="{0D28743C-5A2B-421B-A257-337EE9876AA6}"
+              DTS:DTSID="{23CC3961-A4C2-4A65-9934-F65EF4DDFD19}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -50,7 +50,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Type"
-              DTS:DTSID="{A1DB6EED-CF79-4110-AC6D-24937D8A003B}"
+              DTS:DTSID="{21CC767C-9774-4012-9F60-64EF53272960}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -59,7 +59,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Description"
-              DTS:DTSID="{C2FF44C6-1614-4655-A86F-40A1884DD5D3}"
+              DTS:DTSID="{EE2A413B-60DA-4CEE-8268-F0AD14E4EE03}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -68,7 +68,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Device"
-              DTS:DTSID="{0D111D02-FE4E-462B-A16A-CE4C41BE3840}"
+              DTS:DTSID="{DECD495C-189D-4713-A95F-7BC9CBE74E08}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -77,15 +77,15 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Personnel Record"
-              DTS:DTSID="{46B41FA4-D9C2-416D-8DA6-54DC2B50CF9E}"
+              DTS:DTSID="{16C73ADF-0BBE-45BA-9BDD-CBCD8FAB6163}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000A_"
-              DTS:DataType="2"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Credential"
-              DTS:DTSID="{B8E42F94-0634-4E15-B560-80438EB222AC}"
+              DTS:DTSID="{85AC449A-0207-4A86-B226-1A505BA0708F}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -342,7 +342,7 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\Load from file into staging\Flat File Source.Outputs[Flat File Source Output].Columns[Credential]"
-                          dataType="i2"
+                          dataType="i4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\Load from file into staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Credential]"
@@ -395,7 +395,7 @@
                           name="Personnel Record" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Load from file into staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Credential]"
-                          dataType="i2"
+                          dataType="i4"
                           name="Credential" />
                       </externalMetadataColumns>
                     </output>
@@ -518,7 +518,7 @@
                           lineageId="Package\Foreach Loop Container\Load from file into staging\Flat File Source.Outputs[Flat File Source Output].Columns[Description]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\Load from file into staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Credential]"
-                          cachedDataType="i2"
+                          cachedDataType="i4"
                           cachedName="Credential"
                           externalMetadataColumnId="Package\Foreach Loop Container\Load from file into staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Credential]"
                           lineageId="Package\Foreach Loop Container\Load from file into staging\Flat File Source.Outputs[Flat File Source Output].Columns[Credential]" />
@@ -720,6 +720,10 @@
           Id="Package\Foreach Loop Container\Append into live from staging"
           TopLeft="36,187" />
         <NodeLayout
+          Size="227,42"
+          Id="Package\Foreach Loop Container\Delete duplicates from staging"
+          TopLeft="33,93" />
+        <NodeLayout
           Size="205,42"
           Id="Package\Foreach Loop Container\Load from file into staging"
           TopLeft="40,9" />
@@ -731,6 +735,28 @@
           Size="161,42"
           Id="Package\Foreach Loop Container\Truncate staging"
           TopLeft="65,275" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint]"
+          TopLeft="144.5,51">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 1]"
           TopLeft="146,229">
@@ -767,32 +793,6 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,40.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="227,42"
-          Id="Package\Foreach Loop Container\Delete duplicates from staging"
-          TopLeft="33,93" />
-        <EdgeLayout
-          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint]"
-          TopLeft="144.5,51">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,42"
-              Start="0,0"
-              End="0,34.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
